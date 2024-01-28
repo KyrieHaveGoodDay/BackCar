@@ -95,6 +95,33 @@
     </div>
 
     <!-- 表單 -->
+    <div class="contactUs aboutWork">
+        <!-- title -->
+        <p>聯絡我們</p>
+        <form action="" id="mainForm">
+            <div class="contactUsForm">
+                <div>
+                    <label for="name">姓名(稱呼)<span>*</span></label>
+                    <input type="text" id="name" name="name" placeholder="姓名或稱呼" required>
+                </div>
+                <div>
+                    <label for="phone">連絡電話<span>*</span></label>
+                    <input type="text" id="phone" name="phone" placeholder="請輸入電話" required>
+                </div>
+                <div>
+                    <label for="content">內容<span>*</span></label>
+                    <textarea name="content" id="content" rows="10" required></textarea>
+                </div>
+                
+    
+                <div class="send">
+                    <input type="submit" value="送出">
+                </div>
+            </div>
+
+            <div class="sendEnd">資料已送出，等待服務人員與您連路！</div>
+        </form>
+    </div>
 
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.6810483406243!2d121.41808211187873!3d25.010951639124972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d671771158f%3A0x40b6f9bb1d6c8dc1!2zMjM45paw5YyX5biC5qi55p6X5Y2A5L-K6Iux6KGXMjE55be3NDXlvIQxLTHomZ8!5e0!3m2!1szh-TW!2stw!4v1706264217512!5m2!1szh-TW!2stw"
@@ -104,7 +131,15 @@
         <a href="https://line.me/ti/p/~@a4128838" target="_blonk">世大貨運回頭車</a>
         <p> &copy;2024 世大貨運回頭車 All rights reserved. </p>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // document.getElementById('mainForm').addEventListener('submit', function(event) {
+        //         event.preventDefault();
+        //             // 傳送成功輸入這一段
+        //         $('.contactUsForm').css('display','none');
+        //         $('.sendEnd').addClass('active');
+        // });
+    </script>
 </body>
 
 </html>
