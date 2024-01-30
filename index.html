@@ -98,8 +98,9 @@
     <div class="contactUs aboutWork">
         <!-- title -->
         <p>聯絡我們</p>
-        <form action="" id="mainForm">
+        <form action="" id="contact-form">
             <div class="contactUsForm">
+                <input type="hidden" name="contact_number">
                 <div>
                     <label for="name">姓名(稱呼)<span>*</span></label>
                     <input type="text" id="name" name="name" placeholder="姓名或稱呼" required>
@@ -107,6 +108,10 @@
                 <div>
                     <label for="phone">連絡電話<span>*</span></label>
                     <input type="text" id="phone" name="phone" placeholder="請輸入電話" required>
+                </div>
+                <div>
+                    <label for="Email">Email<span>*</span></label>
+                    <input type="text" id="Email" name="Email" placeholder="請輸入Email" required>
                 </div>
                 <div>
                     <label for="content">內容<span>*</span></label>
@@ -132,13 +137,27 @@
         <p> &copy;2024 世大貨運回頭車 All rights reserved. </p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('60hAvb4KxRIZ6QEI-');
+        })();
+    </script>
     <script>
-        // document.getElementById('mainForm').addEventListener('submit', function(event) {
-        //         event.preventDefault();
-        //             // 傳送成功輸入這一段
-        //         $('.contactUsForm').css('display','none');
-        //         $('.sendEnd').addClass('active');
-        // });
+
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    emailjs.sendForm('service_45vhk1a', 'template_izv0ica', this)
+                        .then(function() {
+                            $('.contactUsForm').css('display','none');
+                            $('.sendEnd').addClass('active');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
     </script>
 </body>
 
