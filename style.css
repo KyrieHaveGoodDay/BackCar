@@ -423,12 +423,12 @@ footer > p{
     .aboutWork_card > a >h3{
         padding: 0;
     }
-    .about{
+    /* .about{
         background-position-x:-150px;
     }
     .work{
         background-position-x:-230px;
-    }
+    } */
     .bgfixed{
         background-position-x:-150px;
     }
