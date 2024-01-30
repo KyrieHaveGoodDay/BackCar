@@ -320,6 +320,7 @@ iframe {
     border: 1px solid #aaa;
     cursor: pointer;
     transition: all 0.5s;
+    color: #000;
 }
 .send > input:hover{
     background: #aaa;
