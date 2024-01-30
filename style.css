@@ -246,23 +246,25 @@ nav > a:hover {
     text-decoration: none;
 }
 .aboutWork_card > a > h3 {
-    font-size: 60px;
+    font-size: 36px;
     color: #fff;
-    padding: 166px 203px;
+    padding: 178px 203px;
     backdrop-filter: blur(5px) opacity(80%);
     transition: 0.5s;
 }
 
-.aboutWork_card > h3:hover {
+.aboutWork_card > a > h3 :hover {
     backdrop-filter: blur(0px) opacity(100%);
 }
 .about {
     background-image: url(./img/about2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -50px ;
+
 }
 .work {
-    background-image: url(./img/about2.jpg);
+    background-image: url(./img/about3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
